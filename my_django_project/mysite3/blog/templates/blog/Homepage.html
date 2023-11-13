@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Metabase Dashboard</title>
+    <title>Metabase Dashboard and Comments</title>
     <style>
         body, html {
             margin: 0;
@@ -12,7 +12,7 @@
             background-color: #f7f7f7;
         }
 
-        .container {
+        .metabase-container {
             text-align: center;
             padding: 20px;
         }
@@ -30,16 +30,68 @@
 
         iframe {
             width: 100vw; /* Full viewport width */
-            height: 100vh; /* Full viewport height */
+            height: 70vh; /* Adjusted height for comments and dashboard */
             border: none; /* Remove iframe border */
+            margin-bottom: 20px; /* Space between dashboard and comments */
+        }
+
+        .comments-section {
+            width: 80%;
+            max-width: 800px; /* Adjust the width as needed */
+            margin: 0 auto;
+        }
+
+        .comments-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .comments-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comments-list li {
+            background: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 80px); /* Adjust the input width */
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #337ab7;
+            color: #fff;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="metabase-container">
         <h1>Welcome to Your Metabase Dashboard</h1>
         <p>Explore insights and data analysis in full-screen mode:</p>
         <iframe src="http://localhost:3000/public/dashboard/27f89df9-8c26-4a77-9c9a-e926640326cb"></iframe>
+    </div>
+
+    <div class="comments-section">
+        <h2>Comments:</h2>
+        <ul class="comments-list">
+            {% for comment in comments %}
+                <li>{{ comment.text }}</li>
+            {% endfor %}
+        </ul>
+
+        <form method="post" action="{% url 'add_comment' %}">
+            {% csrf_token %}
+            <input type="text" name="comment_text" placeholder="Add your comment">
+            <button type="submit">Submit</button>
+        </form>
     </div>
 </body>
 </html>
