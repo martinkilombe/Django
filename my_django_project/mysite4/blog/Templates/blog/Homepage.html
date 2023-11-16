@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metabase Dashboards</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2em;
+        }
+
+        .dashboard {
+            width: 100%;
+            height: 70vh;
+            border: none;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Metabase Dashboards</h1>
+        <p>Explore insights and data analysis in full-screen mode:</p>
+
+        <!-- Revenue Analysis dashboard -->
+        <h2>Revenue Analysis</h2>
+        <iframe class="dashboard" src="http://localhost:3000/public/dashboard/27f89df9-8c26-4a77-9c9a-e926640326cb"></iframe>
+
+        <!-- User Account Analysis dashboard -->
+        <h2>User Account Analysis</h2>
+        <iframe class="dashboard" src="http://localhost:3000/public/dashboard/d3a13ef5-d8bb-40e9-abc8-7ecf6fd5f4a3"></iframe>
+
+        <!-- Customer Behaviour Analytics dashboard -->
+        <h2>Customer Behaviour Analytics</h2>
+        <iframe class="dashboard" src="http://localhost:3000/public/dashboard/027f51ad-b042-41fa-8d1f-688d6c3ad603"></iframe>
+    </div>
+</body>
+</html>
