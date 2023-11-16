@@ -1,1 +1,1 @@
-#blogs
+#blogs/urls.py
