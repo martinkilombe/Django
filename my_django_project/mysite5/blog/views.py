@@ -11,6 +11,5 @@ def Customer_Analysis(request):
     return render(request,'blog/Customer_Analysis.html')
 
 #Customer Behaviour page
-def Custmer_Behaviour(request):
+def Customer_Behaviour(request):
     return render(request,'blog/Customer_Behaviour.html')
-
