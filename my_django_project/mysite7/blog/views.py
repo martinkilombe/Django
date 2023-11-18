@@ -27,8 +27,6 @@ def Revenue_Analysis(request):
     # Render a template with the iframe URL
     return render(request, 'blog/Revenue_Analysis.html', {'iframe_url': iframe_url})
 
-
-
 #Customer Behaviour Analysis
 def Customer_Behaviour(request):
     METABASE_SITE_URL = "http://localhost:3000"
