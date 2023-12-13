@@ -4,6 +4,7 @@ import jwt
 import time
 
 
+
 # Create your views here.
 #Revenue Analysis
 def Revenue_Analysis(request):
@@ -26,9 +27,8 @@ def Revenue_Analysis(request):
     # Render a template with the iframe URL
     return render(request, 'blog/Revenue_Analysis.html', {'iframe_url': iframe_url})
 
-
-#customer Behaviour Analysis
-def Cusomer_Behaviour(request):
+#Customer Behaviour Analysis
+def Customer_Behaviour(request):
     METABASE_SITE_URL = "http://localhost:3000"
     METABASE_SECRET_KEY = "b3dd70e957bd04a868d85e812ca5322c9e1ae09026dabc12e48211fe74e0056b"
 
@@ -47,8 +47,6 @@ def Cusomer_Behaviour(request):
 
     # Render a template with the iframe URL
     return render(request, 'blog/Customer_Behaviour.html', {'iframe_url': iframe_url})
-
-
 
 #Account Analysis
 def Account_Analysis(request):
