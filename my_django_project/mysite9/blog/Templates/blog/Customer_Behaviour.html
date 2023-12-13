@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metabase Dashboards</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2em;
+        }
+
+        .dashboard {
+            width: 100%;
+            height: 70vh;
+            border: none;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Metabase Dashboards</h1>
+        <p>Explore insights and data analysis of Customer Behaviour in PieSpace Company</p>
+
+        <!-- Customer Behavior Analytics dashboard -->
+        <h2>Customer Behavior Analytics</h2>
+        <iframe class="dashboard" src="{{ iframe_url }}"></iframe>
+    </div>
+</body>
+</html>
