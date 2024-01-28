@@ -31,3 +31,4 @@ class BlogUpdateView(UpdateView):
 class BlogDeleteView(DeleteView):
     model = Post
     template_name = 'post_delete.html'
+    success_url = reverse_lazy('home')   ##We use reverse_lazy103 as opposed to just reverse104 so that it won’t execute the URL redirect until our view has finished deleting the blog post.

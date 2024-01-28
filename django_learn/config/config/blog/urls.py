@@ -1,8 +1,9 @@
-#blog/urls.py
 from django.urls import path
-from .views import HomepageView
+from . import views
 
-urlpatterns=[
-    path('',HomepageView.as_view(),name= 'home'),
-
+urlpatterns = [
+    path('', views.comment_list, name='comment_list'),
+    path('comment/add/', views.add_comment, name='add_comment'),
+    path('comment/<int:pk>/edit/', views.edit_comment, name='edit_comment'),
+    path('comment/<int:pk>/delete/', views.delete_comment, name='delete_comment'),
 ]
